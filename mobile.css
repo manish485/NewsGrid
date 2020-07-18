@@ -1,0 +1,52 @@
+/* Main navigation */
+#main_nav .social{
+    display: none;
+}
+
+/* Making  main-container responcive */
+
+#main_nav .container{
+
+    grid-template-columns: 1fr;
+    grid-gap:1.2rem;
+}
+
+/* Targeting logo and link of nav tag to move into center */
+#main_nav  ul,
+#main_nav .logo{
+    justify-self: center;
+}
+
+/* Targeting and chnaging the grid frection given in the style tag */
+#home_article .articles-container{
+    grid-template-columns: repeat(2,1fr)
+}
+
+
+/* Targeting and changing the first child from the grid-comtainer */
+#home_article .articles-container> *:first-child{
+    grid-template-columns: 1fr;
+    grid-column: 1;
+}
+
+
+#home_article .articles-container> *:last-child{
+    grid-template-columns: 1fr;
+    grid-column: 1;
+}
+
+/* Responcive on small mobile devices */
+@media(max-width:600px){
+
+#showcase .showcase-container,
+#home_article .articles-container{
+    grid-template-columns: 1fr;
+}
+
+#main-footer .footer-container > *:last-child {
+    grid-template-columns: 1fr;
+}
+
+
+
+}

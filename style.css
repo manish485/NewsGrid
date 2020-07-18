@@ -1,0 +1,364 @@
+:root{
+    --primary_color:#c72727;
+    --secondry_color:#f99500;
+    --light_color:#f3f3f3;
+    --dark_color:#333;
+    --max-width:1100px;
+
+}
+
+.category{
+    --sports_color:#f99500;
+    --ent_color:#a66bbe;
+    --tech_color:#009cff;
+}
+
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body{
+    font-family: 'lato ',sans-serif;
+    line-height: 1.5;
+    background: var(--light_color);
+}
+
+a{
+    columns: #333;
+    text-decoration: none;
+
+}
+
+ul{
+    list-style: none;
+}
+
+img{
+    width:100%
+}
+
+h1,h2,h3,h4,h5,h6{
+   font-family: 'staatliches',cursive;
+   margin-bottom: 0.55rem;
+  line-height: 1.3;
+ 
+
+}
+
+/* Utilites */
+
+.container{
+    max-width: 1380px;
+    padding: 0 2rem;
+    margin: auto;
+    overflow: hidden;
+}
+
+/* Utilites class for Category */
+
+   .category{
+       display: inline-block;
+       color: #fff;
+       font-weight: 0.65rem;
+       padding: 0.4rem 0.5rem;
+       text-transform: uppercase;
+       margin-bottom: 0.5rem;
+       border-radius: 15px;
+   }
+
+/*  Definding the classes with seprate color  start */
+
+
+
+   .sports-category{
+       background: var(--sports_color);
+   }
+ 
+   .ent-category{
+       background: var(--ent_color);
+   }
+
+  .tech-category{
+      background: var(--tech_color);
+  }
+
+
+
+/*  Definding the classes with seprate color  end */
+
+/* Botton  designing start */
+.btn{
+    display: inline-block;
+    border: none;
+    background: #333;
+    color: #fff;
+    padding: 0.4rem 0.5rem;
+    border-radius: 15px;
+
+}
+
+.btn-block{
+   display: block;
+   width: 100%;
+text-align: center;
+
+}
+
+.btn-light{
+    background: var(--light_color);
+}
+
+.primary-btn{
+    background: var(--primary_color);
+}
+
+.secondry-btn{
+    background: var(--secondry_color);
+}
+
+
+
+/* Botton designing ends */
+
+
+/* Putting hover over effect on button */
+
+.btn :hover{
+    opacity: 0.9;
+}
+
+.card{
+    background: #fff;
+    padding: 1rem;
+}
+
+.bg-dark{
+    background: var(--dark_color);
+    color: #fff;
+}
+
+.bg-primary{
+    background: var(--primary_color);
+    color: #fff;
+}
+
+.bg-secandary{
+    background: var(--secondry_color);
+    color:#333;
+}
+.py-2{
+    padding: 1.5rem 1.5rem;
+
+}
+
+
+/* Main-nav */
+#main_nav{
+   background: #fff;
+   position: fixed; 
+   top: 0;
+   z-index: 2;
+  
+
+}
+
+#main_nav .container{
+    display: grid;
+    grid-template-columns: 600px 400px 300px;
+    padding: 2rem;
+    /* margin: 0  150px; */
+    align-items: center;
+}
+
+#main_nav .logo{
+    width:180px;
+}
+
+#main_nav ul {
+    justify-self: end;
+    display: flex;  
+}
+
+#main_nav ul li a{
+    padding: 0.75rem;
+    font-weight: bold;
+}
+
+/* Defining the value of current class */
+
+#main_nav ul li a.current{
+   background: var(--primary_color);
+   color: #fff;
+
+}
+
+#main_nav ul li a:hover{
+    background: var(--light_color);
+    color: #333;
+}
+
+
+#main_nav .social{
+    justify-self: center;
+}
+
+#main_nav .social i {
+    color: #777;
+    margin-right: 0.75rem;
+}
+
+
+
+#showcase{
+    color: white;
+    background: #333;
+    /* background: url("/Images/image_resources/featured.jpg") no-repeat center center/cover; */
+
+    padding: 2rem;
+    position: relative;
+}
+
+#showcase::before{
+    content: '';
+    background: url("https://source.unsplash.com/1600x900/?nature,water") no-repeat center center/cover;
+    /* background: red; */
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    opacity: 0.7;
+}
+
+#showcase .showcase-container{
+display: grid;
+grid-template-columns: repeat(2,1fr);
+justify-content: center;
+align-items: center;
+height: 50vh;
+
+
+}
+
+#showcase .showcase-content{
+  z-index: 1;
+
+}
+
+#showcase .showcase-content p {
+    margin-bottom: 1rem;
+}
+
+
+
+
+/* Styleing the grid part */
+
+#home_article .articles-container{
+    display: grid;
+    grid-template-columns: repeat(3,1fr);
+    padding: 2rem 2rem;
+}
+
+/* Expanding the image and text */
+
+#home_article .articles-container > *:first-child{
+   display: grid;
+   grid-template-columns: repeat(2,1fr);
+   align-items: center;
+   grid-column: 1 / span 2;
+
+}
+
+
+#home_article .articles-container > *:last-child{
+    display: grid;
+    grid-template-columns: repeat(2,1fr);
+    align-items: center;
+    grid-column: 1 / span 2;
+ 
+ }
+
+
+  #home_article .articles-container > *:last-child{
+     grid-column: 2 / span 2;
+ } 
+
+
+ #main-footer{
+   background: #333;
+   color: #fff;
+
+ }
+
+ #main-footer img {
+     width: 160px;
+ }
+
+ #main-footer .footer-container{
+     display: grid;
+     grid-template-columns: repeat(4 , 1fr);
+     /* margin: 0 1rem; */
+     
+ }
+
+ #main-footer .footer-container div  {
+    padding: 0.7rem 1.5rem;
+    margin-top: 2.3rem;
+
+
+ }
+
+ #main-footer .footer-container > div:last-child{
+     background: #444;
+    
+     grid-column: 1 /span 4;
+     /* border-style: border-box; */
+    padding: 0.7rem 0.9rem;
+    text-align: center;
+    border-radius: 15px;
+
+    /* align-items: center; */
+    /* justify-self: center; */
+ }
+ .list li {
+     padding: 0.5rem 0;
+     border-bottom: #444 dotted;
+     width: 90%;
+ }
+
+
+ #main-footer .footer-container ul li a {
+     color: #fff;
+ }
+
+
+
+ #main-footer .footer-container ul li :hover{
+     background: var(--secondry_color);
+     color:#f3f3f3;
+     transform: 0.3;
+ }
+
+ #main-footer .footer-container input[type='email']{
+   width: 90%;
+   padding: 0.5rem;
+   margin-bottom: 0.5rem;     
+
+ }
+
+
+ #main-about .page-container{
+      display: grid;
+      grid-template-columns: repeat(2,1fr);
+
+ }
+
+
+
+
+ .l-heading{
+     font-size: 2.5rem;
+ }
